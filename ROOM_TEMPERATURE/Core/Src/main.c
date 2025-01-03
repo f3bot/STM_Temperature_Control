@@ -50,10 +50,65 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-float temperature = 0.0f;
+float current_temperature_f = 0.0f;
+float set_temp_f = 28.0f;
+float pwm_duty_f = 0.0f;
+uint16_t pwm_duty_u = 0;
+float pressure = 0.0f;
 char buffer[100];
 int i = 0;
 
+struct PID_Controller{
+	float Kp;
+	float Ki;
+	float Kd;
+	float Tp;
+	float prev_error;
+	float prev_u_I;
+};
+struct PID_Controller PID1;
+
+float calculate_PID(struct PID_Controller *PID, float set_temp, float measured_temp){
+	float u = 0;
+	float error;
+	float u_P, u_I, u_D;
+
+	error = set_temp - measured_temp;
+
+	//Proportionoal gain
+	u_P = PID->Kp * error;
+
+	//Integral gain
+
+	u_I = PID->Ki * PID->Tp / 2.0 * (error + PID->prev_error) + PID->prev_u_I;
+	PID->prev_u_I = u_I;
+
+	//Derivative gain
+
+	u_D = (error - PID->prev_error) / PID->Tp;
+
+
+	PID->prev_error = error;
+
+	u = u_P + u_I + u_D;
+
+	return u;
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM2) {
+    	current_temperature_f = BMP280_ReadTemperature();
+    	pwm_duty_f = (htim3.Init.Period * calculate_PID(&PID1, set_temp_f, current_temperature_f));
+    	if (pwm_duty_f < 0.0 ){
+    		pwm_duty_u = 0;
+    	}
+    	else if (pwm_duty_f > htim3.Init.Period){
+    		pwm_duty_u = htim3.Init.Period;
+    	}
+    	else pwm_duty_u = (uint16_t) pwm_duty_f;
+    	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pwm_duty_u);
+    }
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,7 +119,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 /**
@@ -75,13 +129,18 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	PID1.Kp = 0.038102305639845;
+	PID1.Ki = 0.000269333866370601;
+	PID1.Kd = 0.01898381935333;
+	PID1.Tp = 1;
+	PID1.prev_error = 0;
+	PID1.prev_u_I = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-    HAL_Init();
+  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -108,23 +167,16 @@ int main(void)
   BMP280_Init(&hi2c1, BMP280_TEMPERATURE_16BIT, BMP280_STANDARD, BMP280_FORCEDMODE);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_Base_Start_IT(&htim2);
-  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-   {
-       temperature = BMP280_ReadTemperature();
+  {
+    /* USER CODE END WHILE */
 
-       uint32_t timestamp = HAL_GetTick();
-
-       sprintf(buffer, "Time: %lu ms, Temperature: %.2f C\r\n", timestamp, temperature);
-
-       HAL_UART_Transmit(&huart3, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);
-
-       HAL_Delay(250);
-   }
+    /* USER CODE BEGIN 3 */
+  }
   /* USER CODE END 3 */
 }
 

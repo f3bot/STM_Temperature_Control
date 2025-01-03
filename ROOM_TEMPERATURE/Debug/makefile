@@ -60,8 +60,8 @@ all: main-build
 main-build: ROOM_TEMPERATURE.elf secondary-outputs
 
 # Tool invocations
-ROOM_TEMPERATURE.elf ROOM_TEMPERATURE.map: $(OBJS) $(USER_OBJS) C:\Users\febe\Desktop\systemy\ mikroprocesorowe\ wszystko\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\febe\Desktop\systemy mikroprocesorowe wszystko\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ROOM_TEMPERATURE.elf ROOM_TEMPERATURE.map: $(OBJS) $(USER_OBJS) C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
