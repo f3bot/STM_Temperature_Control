@@ -30,6 +30,7 @@
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
 #include "BMPXX80.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,19 +52,12 @@
 
 /* USER CODE BEGIN PV */
 float current_temperature_f = 0.0f;
-float set_temp_f = 40.0f;
+float set_temp_f = 28.0f;
 float pwm_duty_f = 0.0f;
 uint16_t pwm_duty_u = 0;
-
-char current_temp_uart[50];
-char set_temp_uart[50];
-char pwm_duty_uart[50];
-
-
-#define buffer_size 100
-uint8_t receiveBuffer[buffer_size];
-uint8_t txBuffer[50];
-
+float pressure = 0.0f;
+char buffer[100];
+int i = 0;
 
 struct PID_Controller{
 	float Kp;
@@ -120,9 +114,47 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
                 current_temperature_f, set_temp_f, pwm_duty_u);
 
         HAL_UART_Transmit(&huart3, (uint8_t *)combined_uart, strlen(combined_uart), 1000);
-
     }
 }
+
+
+#define BUFFER_SIZE 20  // Increase buffer size to 50 characters
+char received[BUFFER_SIZE];
+
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+    if (huart->Instance == USART3) {
+        received[BUFFER_SIZE - 1] = '\0';
+
+        if (strncmp(received, "SETTEMP", 7) == 0) {
+
+            char *tempStr = &received[7];
+            int tempValue = atoi(tempStr);
+
+            if (tempValue > 0 && tempValue <= 100) {
+                set_temp_f = (float)tempValue;
+
+                char response[50];
+                sprintf(response, "New temperature set: %.2fC\r\n", set_temp_f);
+                HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
+            } else {
+                char response[50];
+                sprintf(response, "Invalid temperature value: %s\r\n", tempStr);
+                HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
+            }
+        } else {
+            char response[50];
+            sprintf(response, "Failed to recognize command: %s\r\n", received);
+            HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
+        }
+
+    }
+        memset(received, 0, sizeof(received));
+        HAL_UART_Receive_IT(&huart3, (uint8_t *)received, BUFFER_SIZE - 1);
+}
+
+
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -177,18 +209,19 @@ int main(void)
   MX_SPI4_Init();
   MX_TIM3_Init();
   MX_TIM2_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   BMP280_Init(&hi2c1, BMP280_TEMPERATURE_16BIT, BMP280_STANDARD, BMP280_FORCEDMODE);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_Base_Start_IT(&htim2);
-  HAL_UART_Receive_IT(&huart3, receiveBuffer, buffer_size);
+  HAL_UART_Receive_IT(&huart3, (uint8_t *)received, BUFFER_SIZE - 1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

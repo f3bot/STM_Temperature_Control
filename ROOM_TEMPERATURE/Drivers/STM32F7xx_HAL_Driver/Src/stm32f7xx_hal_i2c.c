@@ -7068,7 +7068,7 @@ static HAL_StatusTypeDef I2C_WaitOnTXISFlagUntilTimeout(I2C_HandleTypeDef *hi2c,
     /* Check for the Timeout */
     if (Timeout != HAL_MAX_DELAY)
     {
-        if (((HAL_GetTick() - Tickstart) > Timeout) || (Timeout == 0U))
+      if (((HAL_GetTick() - Tickstart) > Timeout) || (Timeout == 0U))
       {
         if ((__HAL_I2C_GET_FLAG(hi2c, I2C_FLAG_TXIS) == RESET))
         {

@@ -1,29 +1,27 @@
-15:22:45 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+19:53:42 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/Src/main.c:122:62: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-  122 |         HAL_UART_Transmit(&huart3, (uint8_t *)combined_uart, strlen(combined_uart), 1000);
-      |                                                              ^~~~~~
-../Core/Src/main.c:33:1: note: include '<string.h>' or provide a declaration of 'strlen'
-   32 | #include "BMPXX80.h"
-  +++ |+#include <string.h>
-   33 | /* USER CODE END Includes */
-../Core/Src/main.c:122:62: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  122 |         HAL_UART_Transmit(&huart3, (uint8_t *)combined_uart, strlen(combined_uart), 1000);
-      |                                                              ^~~~~~
-../Core/Src/main.c:122:62: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:132:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  132 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+../Core/Src/main.c:147:67: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  147 |             sprintf(response, "Failed to recognize command: %s\r\n", received);
+      |                                                                   ^
+../Core/Src/main.c:147:13: note: 'sprintf' output between 32 and 51 bytes into a destination of size 50
+  147 |             sprintf(response, "Failed to recognize command: %s\r\n", received);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ROOM_TEMPERATURE.elf
  
 arm-none-eabi-size  ROOM_TEMPERATURE.elf 
 arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
    text	   data	    bss	    dec	    hex	filename
-  46888	    792	   4040	  51720	   ca08	ROOM_TEMPERATURE.elf
+  47792	    792	   4096	  52680	   cdc8	ROOM_TEMPERATURE.elf
 Finished building: default.size.stdout
  
 Finished building: ROOM_TEMPERATURE.list
  
 
-15:22:46 Build Finished. 0 errors, 2 warnings. (took 1s.209ms)
+19:53:43 Build Finished. 0 errors, 2 warnings. (took 1s.55ms)
 

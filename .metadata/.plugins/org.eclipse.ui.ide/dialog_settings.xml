@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE"/>
 			<item value="C:\Users\febe\Desktop\SEM5\Systemy Mikroprocesorowe\SM - lab\Final_Project\STM_project"/>
 		</list>
 	</section>
