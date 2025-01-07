@@ -6,7 +6,7 @@ def temperature_model(t, k, T0, T):
     return k * (1 - np.exp(-(t - T0) / T)) * (t > T0)
 
 k = 23.27
-T0 = -4.5
+T0 = .5
 T = 290
 print("Parametry Transmitancji")
 print("K = ", k)
@@ -18,8 +18,6 @@ temperature = temperature_model(timeS, k, T0, T)
 data = pd.read_csv("proszedzialaj.csv", encoding='latin1')
 
 data['Time (s)'] = data['Timestamp (ms)'] / 1000
-
-data['Normalized Temperature (°C)'] = data['Temperature (°C)'] - data['Temperature (°C)'].min()
 
 time = data['Time (s)']
 normalized_temperature = data['Normalized Temperature (°C)']

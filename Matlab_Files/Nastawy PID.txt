@@ -1,0 +1,15 @@
+Nastawy PID:
+Kp = 0.038102305639845
+Ki = 0.000269333866370601
+Kd = 0.01898381935333
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM2) {
+    	current_temperature_f = BMP280_ReadTemperature();
+    	pwm_duty_f = (htim3.Init.Period * calculate_PID(&PID1 , set_temp_f, current_temperature_f));
+    	if (pwm_duty_f < 0.0 ) pwm_duty_u = 0;
+    	else if (pwm_duty_f > htim3.Init.Period) pwm_duty_u = htim3.Init.Period;
+    	else pwm_duty_u = (uint16_t) pwm_duty_f;
+
+    	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pwm_duty_u);
+}
