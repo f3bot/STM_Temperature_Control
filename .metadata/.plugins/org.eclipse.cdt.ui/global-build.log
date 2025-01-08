@@ -4701,3 +4701,10 @@ Finished building: default.size.stdout
  
 Finished building: ROOM_TEMPERATURE.list
  
+16:24:01 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  47848	    792	   4088	  52728	   cdf8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
