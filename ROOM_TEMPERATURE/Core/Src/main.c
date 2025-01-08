@@ -109,25 +109,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     	else pwm_duty_u = (uint16_t) pwm_duty_f;
     	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pwm_duty_u);
 
-        char combined_uart[150];
-        sprintf(combined_uart, "Current temperature: %.2fC, Set temperature: %.2fC, PWM duty cycle: %u%%\r\n",
-                current_temperature_f, set_temp_f, pwm_duty_u);
-
-        HAL_UART_Transmit(&huart3, (uint8_t *)combined_uart, strlen(combined_uart), 1000);
     }
 }
 
+void slice(const char* str, char* result, size_t start, size_t end) {
+    strncpy(result, str + start, end - start);
+}
 
-#define BUFFER_SIZE 20  // Increase buffer size to 50 characters
+#define BUFFER_SIZE 10
 char received[BUFFER_SIZE];
-
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     if (huart->Instance == USART3) {
-        received[BUFFER_SIZE - 1] = '\0';
 
         if (strncmp(received, "SETTEMP", 7) == 0) {
-
             char *tempStr = &received[7];
             int tempValue = atoi(tempStr);
 
@@ -142,15 +137,23 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
                 sprintf(response, "Invalid temperature value: %s\r\n", tempStr);
                 HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
             }
+        } else if (strncmp(received, "LOOKUPTMP", 9) == 0) {
+            // Respond with the current variables
+            char response[150];
+            sprintf(response, "Current temperature: %.2fC, Set temperature: %.2fC, PWM duty cycle: %u%%\r\n",
+                    current_temperature_f, set_temp_f, pwm_duty_u);
+            HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
         } else {
+            // Unrecognized command
             char response[50];
             sprintf(response, "Failed to recognize command: %s\r\n", received);
             HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
         }
 
-    }
-        memset(received, 0, sizeof(received));
+        // Clear the buffer for the next command
+        memset(received, '\0', strlen(received));
         HAL_UART_Receive_IT(&huart3, (uint8_t *)received, BUFFER_SIZE - 1);
+    }
 }
 
 
