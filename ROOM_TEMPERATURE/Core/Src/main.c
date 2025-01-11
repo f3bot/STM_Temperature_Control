@@ -20,7 +20,6 @@
 #include "main.h"
 #include "eth.h"
 #include "i2c.h"
-#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "usb_otg.h"
@@ -58,6 +57,7 @@ uint16_t pwm_duty_u = 0;
 float pressure = 0.0f;
 char buffer[100];
 int i = 0;
+char full_response[100];
 
 struct PID_Controller{
 	float Kp;
@@ -108,7 +108,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     	}
     	else pwm_duty_u = (uint16_t) pwm_duty_f;
     	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pwm_duty_u);
-
+        uint32_t timestamp = HAL_GetTick();
+        sprintf(full_response, "Timestamp: %lu ms, Set Temperature: %.2fC, Current Temperature: %.2fC, PWM Value: %u\r\n",
+                timestamp, set_temp_f, current_temperature_f, pwm_duty_u);
+        HAL_UART_Transmit(&huart3, (uint8_t*)full_response, strlen(full_response), 900);
     }
 }
 
@@ -121,7 +124,7 @@ char received[BUFFER_SIZE];
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     if (huart->Instance == USART3) {
-
+        // Check and process received command
         if (strncmp(received, "SETTEMP", 7) == 0) {
             char *tempStr = &received[7];
             int tempValue = atoi(tempStr);
@@ -137,12 +140,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
                 sprintf(response, "Invalid temperature value: %s\r\n", tempStr);
                 HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
             }
-        } else if (strncmp(received, "LOOKUPTMP", 9) == 0) {
-            // Respond with the current variables
-            char response[150];
-            sprintf(response, "Current temperature: %.2fC, Set temperature: %.2fC, PWM duty cycle: %u%%\r\n",
-                    current_temperature_f, set_temp_f, pwm_duty_u);
-            HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
         } else {
             // Unrecognized command
             char response[50];
@@ -151,7 +148,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
         }
 
         // Clear the buffer for the next command
-        memset(received, '\0', strlen(received));
+        memset(received, '\0', BUFFER_SIZE);
+
+        // Re-enable UART interrupt for the next reception
         HAL_UART_Receive_IT(&huart3, (uint8_t *)received, BUFFER_SIZE - 1);
     }
 }
@@ -209,7 +208,6 @@ int main(void)
   MX_I2C1_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
-  MX_SPI4_Init();
   MX_TIM3_Init();
   MX_TIM2_Init();
   MX_USART2_UART_Init();

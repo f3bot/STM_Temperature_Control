@@ -1,0 +1,196 @@
+import numpy as np
+import scipy.signal as signal
+import matplotlib.pyplot as plt
+
+b = 0.5
+k = 1
+m = 1
+Tp = 0.05
+Tf = 10
+samples = int(Tf / Tp + 1)
+T = np.linspace(0, Tf, samples)
+
+U = np.sin(np.pi * T)
+A = np.array([[0, 1],
+              [-k/m, -b/m]])
+B = np.array([[0],
+              [1/m]])
+C = np.array([[1, 0]])
+D = np.array([[0]])
+
+hatA = A * Tp + np.eye(2, 2)
+hatB = B * Tp
+hatC = C
+hatD = D
+
+
+def zad1():
+    def input_signal(t):
+        return np.sin(np.pi * t)
+
+    u = input_signal(T)
+
+    Ad = np.eye(2) + Tp * A
+    Bd = Tp * B
+    Cd = C
+    Dd = D
+
+    system_continuous = signal.StateSpace(A, B, C, D)
+    t_out, y_cont, _ = signal.lsim(system_continuous, U=u, T=T)
+
+    system_discrete = signal.dlti(Ad, Bd, Cd, Dd, dt=Tp)
+    t_out_discrete, y_discrete, _ = signal.dlsim(system_discrete, u)
+
+    plt.figure(figsize=(8, 6))
+    plt.plot(t_out, y_cont, label="Model ciągły")
+    plt.step(t_out_discrete, y_discrete, label="Model dyskretny", where='post')
+    plt.xlabel("Czas [s]")
+    plt.ylabel("Wyjście y(t)")
+    plt.title("Porównanie modeli ciągłego i dyskretnego dla Tp = 0.05")
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+    print(system_discrete)
+def zad2():
+    Xc = np.array([[2], [0]])
+    Pc = np.array([[0, 0], [0, 0]])
+
+    Q = np.array([[0.01, 0], [0, 0.01]])
+    R = np.array([[0.1]])
+
+    XC = Xc.T
+    XP = Xc.T
+
+    system_continuous = signal.StateSpace(A, B, C, D)
+    t_out, Y, _ = signal.lsim(system_continuous, U=U, T=T)
+
+    for i in range(0, samples - 1):
+        Xp = hatA @ Xc + hatB * U[i]
+        Pp = hatA @ Pc @ hatA.T + Q
+        
+        e = Y[i] - hatC @ Xp
+        S = hatC @ Pp @ hatC.T + R
+        K = Pp @ hatC.T @ np.linalg.inv(S)
+        
+        Xc = Xp + K @ e
+        Pc = Pp - K @ hatC @ Pp
+        
+        XC = np.vstack([XC, Xc.T])
+        XP = np.vstack([XP, Xp.T])
+
+def zad3_4():
+    def discretize_system(A, B, C, D, Tp):
+        n = A.shape[0]
+        Ad = np.eye(n) + Tp * A
+        Bd = Tp * B
+        Cd = C
+        Dd = D
+        return Ad, Bd, Cd, Dd
+
+    def kalman_filter_step(Ad, Bd, Cd, Dd, xc, Pc, u, y, Q, R):
+        xp = Ad @ xc + Bd @ np.array([[u]])
+        Pp = Ad @ Pc @ Ad.T + Q
+        e = y - (Cd @ xp + Dd @ np.array([[u]]))
+        S = Cd @ Pp @ Cd.T + R
+        K = Pp @ Cd.T @ np.linalg.inv(S)
+        xc = xp + K @ e
+        Pc = Pp - K @ S @ K.T
+
+        return xp, Pp, xc, Pc
+
+    b = 0.5
+    k = 1
+    m = 1
+    Tp = 0.1
+    Tf = 25
+    samples = int(Tf / Tp + 1)
+
+    T = np.linspace(0, Tf, samples)
+    U = np.sin(np.pi * T)  
+    W = np.random.normal(0, 0.01, samples)  #TUTAJ
+    V = np.array([np.random.normal(0, 0.01, samples),
+                  np.random.normal(0, 0.01, samples)])  #TUTAJ
+
+    A = np.array([[0, 1], [-k / m, -b / m]])
+    B = np.array([[0], [1 / m]])
+    C = np.array([[1, 0]])
+    D = np.array([[0]])
+    B0 = np.array([[1, 0], [0, 1]])
+    U0 = np.array([V[0], V[1] + 1 / m * U])
+    D0 = np.array([[0, 0]])
+
+
+    res = signal.lsim([A, B0, C, D0], U0.T, T)
+    X = res[2]
+    Y = res[1]
+
+    plt.figure()
+    plt.plot(T, X)
+    plt.title("Real plant")
+    plt.xlabel("Time [s]")
+    plt.ylabel("States")
+    plt.legend(['x1', 'x2'])
+    plt.grid()
+
+
+    Y = Y + W
+    plt.figure()
+    plt.plot(T, Y)
+    plt.title("Noised measurement")
+    plt.xlabel("Time [s]")
+    plt.ylabel("Output")
+    plt.grid()
+    Ad, Bd, Cd, Dd = discretize_system(A, B, C, D, Tp)
+    Xc = np.array([[2.0], [0.0]])  
+    Pc = np.array([[1.0, 0.0], [0.0, 1.0]])  
+    Q = np.eye(2) * 0.01 #TUTAJ 
+    R = np.array([[0]])#TUTAJ
+    XC = Xc.T
+    XP = Xc.T
+    for i in range(samples - 1):
+
+        u = U[i]
+        y = Y[i]
+
+        xp, Pp, Xc, Pc = kalman_filter_step(Ad, Bd, Cd, Dd, Xc, Pc, u, y, Q, R)
+
+        XC = np.vstack([XC, Xc.T])
+        XP = np.vstack([XP, xp.T])
+    plt.figure()
+    plt.plot(T, XP)
+    plt.title("Apriori estimate")
+    plt.xlabel("Time [s]")
+    plt.ylabel("States")
+    plt.legend(['x1', 'x2'])
+    plt.grid()
+
+    plt.figure()
+    plt.plot(T, X[:, 0], label='x1')  # Rzeczywisty x1
+    plt.plot(T, X[:, 1], label='x2')  # Rzeczywisty x2
+    plt.plot(T, XC[:, 0], label='x1 est (aposteriori)')  # Estymata aposteriori x1
+    plt.plot(T, XC[:, 1], label='x2 est (aposteriori)')  # Estymata aposteriori x2
+    plt.title("Aposteriori estimate")
+    plt.xlabel("Time [s]")
+    plt.ylabel("States")
+    plt.legend()
+    plt.grid()
+
+    plt.figure()
+    plt.plot(T, X - XC)
+    plt.title("Estimation errors")
+    plt.xlabel("Time [s]")
+    plt.ylabel("Error")
+    plt.legend(['x1 error', 'x2 error'])
+    plt.grid()
+
+    plt.show()
+
+
+def main():
+    #zad1()
+    #zad2()
+    zad3_4()
+
+if __name__ == "__main__":
+    main()
