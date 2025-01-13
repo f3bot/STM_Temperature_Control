@@ -4909,3 +4909,1369 @@ arm-none-eabi-size  ROOM_TEMPERATURE.elf
   46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
 Finished building: default.size.stdout
  
+15:37:11 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:37:40 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:44:24 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:130:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  130 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:45:00 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:45:24 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:45:56 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:46:32 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:37:10 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:37:41 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:38:16 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:42:01 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:54:30 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:130:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  130 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:193:29: error: stray '`' in program
+  193 |   /* USER CODE BEGIN Init */``
+      |                             ^
+../Core/Src/main.c:193:30: error: stray '`' in program
+  193 |   /* USER CODE BEGIN Init */``
+      |                              ^
+make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:54:46 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:130:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  130 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+16:59:55 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46680	    792	   4088	  51560	   c968	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:12:12 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46712	    792	   4096	  51600	   c990	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:16:53 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46712	    792	   4096	  51600	   c990	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:25:34 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46704	    792	   4096	  51592	   c988	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:29:47 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46712	    792	   4096	  51600	   c990	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:30:46 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:134:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  134 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:36:05 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:37:32 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:39:14 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:40:20 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:43:41 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:52:06 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:52:44 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:134:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  134 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:57:07 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:57:26 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+18:10:21 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46720	    792	   4096	  51608	   c998	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:22:41 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46720	    792	   4096	  51608	   c998	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:30:33 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46720	    792	   4096	  51608	   c998	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:32:54 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46720	    792	   4096	  51608	   c998	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:34:39 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:138:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  138 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46720	    792	   4096	  51608	   c998	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:39:30 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:50:23 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:50:38 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+18:54:56 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:56:00 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:58:51 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+19:03:25 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+12:31:18 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+12:32:07 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+12:32:33 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+12:39:54 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f746zgtx.d" -MT"Core/Startup/startup_stm32f746zgtx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f746zgtx.o" "../Core/Startup/startup_stm32f746zgtx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Startup/startup_stm32f746zgtx.s: Assembler messages:
+../Core/Startup/startup_stm32f746zgtx.s:61: Error: bad instruction `cd ldr sp,=_estack'
+make: *** [Core/Startup/subdir.mk:19: Core/Startup/startup_stm32f746zgtx.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+12:40:18 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f746zgtx.d" -MT"Core/Startup/startup_stm32f746zgtx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f746zgtx.o" "../Core/Startup/startup_stm32f746zgtx.s"
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+12:45:08 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+12:59:44 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:00:29 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+13:01:03 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+13:02:40 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:03:27 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:12:59 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:15:06 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:26:04 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:28:43 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+13:29:07 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+13:30:02 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:30:32 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:31:08 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:36:25 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:41:33 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:49:20 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+13:58:18 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:11:00 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:13:19 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+14:14:14 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:136:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  136 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46656	    792	   4096	  51544	   c958	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:34:28 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'calculate_PID':
+../Core/Src/main.c:101:18: error: stray '`' in program
+  101 |         return u;`
+      |                  ^
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:135:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  135 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:34:35 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:135:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  135 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46664	    792	   4096	  51552	   c960	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:55:04 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'calculate_PID':
+../Core/Src/main.c:62:20: error: expected expression before '=' token
+   62 | #define MAX_OUTPUT = 999
+      |                    ^
+../Core/Src/main.c:98:13: note: in expansion of macro 'MAX_OUTPUT'
+   98 |     if (u > MAX_OUTPUT) {
+      |             ^~~~~~~~~~
+../Core/Src/main.c:63:20: error: expected expression before '=' token
+   63 | #define MIN_OUTPUT = 0
+      |                    ^
+../Core/Src/main.c:101:20: note: in expansion of macro 'MIN_OUTPUT'
+  101 |     } else if (u < MIN_OUTPUT) {
+      |                    ^~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:146:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  146 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:55:16 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:146:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  146 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:56:10 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+14:57:28 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:58:00 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+14:58:37 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:03:51 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:15:29 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:22:07 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:23:17 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:23:50 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:24:16 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+15:41:54 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+15:42:22 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:16:28 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:30:29 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:30:42 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:33:51 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+16:34:18 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:10:18 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:13:52 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:17:22 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:20:56 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+17:21:24 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:24:13 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+17:25:27 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+18:42:32 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:49:41 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+18:51:06 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+18:51:29 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+19:26:52 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:149:29: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  149 |             int tempValue = atoi(tempStr);
+      |                             ^~~~
+arm-none-eabi-gcc -o "ROOM_TEMPERATURE.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\febe\STM_Temperature_Control\ROOM_TEMPERATURE\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROOM_TEMPERATURE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROOM_TEMPERATURE.elf
+ 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+arm-none-eabi-objdump -h -S ROOM_TEMPERATURE.elf  > "ROOM_TEMPERATURE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROOM_TEMPERATURE.list
+ 
+19:34:21 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 
+16:11:04 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+make -j12 all 
+arm-none-eabi-size  ROOM_TEMPERATURE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
+Finished building: default.size.stdout
+ 

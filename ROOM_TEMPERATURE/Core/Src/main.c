@@ -51,13 +51,19 @@
 
 /* USER CODE BEGIN PV */
 float current_temperature_f = 0.0f;
-float set_temp_f = 28.0f;
+float set_temp_f = 32.0f;
 float pwm_duty_f = 0.0f;
 uint16_t pwm_duty_u = 0;
 float pressure = 0.0f;
 char buffer[100];
 int i = 0;
 char full_response[100];
+
+#define MAX_OUTPUT  999
+#define MIN_OUTPUT  0
+#define MAX_I_TERM 0.2f   // Half of the PWM period (htim3.Init.Period)
+#define MIN_I_TERM -0.2f  // Negative limit to allow for correction in the other direction
+
 
 struct PID_Controller{
 	float Kp;
@@ -68,32 +74,38 @@ struct PID_Controller{
 	float prev_u_I;
 };
 struct PID_Controller PID1;
+float u_P, u_I, u_D;
 
-float calculate_PID(struct PID_Controller *PID, float set_temp, float measured_temp){
-	float u = 0;
-	float error;
-	float u_P, u_I, u_D;
+float calculate_PID(struct PID_Controller *PID, float set_temp, float measured_temp) {
+    float u = 0;
+    float error;
 
-	error = set_temp - measured_temp;
+    error = set_temp - measured_temp;
 
-	//Proportionoal gain
-	u_P = PID->Kp * error;
+    // Proportional gain
+    u_P = PID->Kp * error;
 
-	//Integral gain
+    // Integral gain
+    u_I = PID->Ki * PID->Tp / 2.0 * (error + PID->prev_error) + PID->prev_u_I;
 
-	u_I = PID->Ki * PID->Tp / 2.0 * (error + PID->prev_error) + PID->prev_u_I;
-	PID->prev_u_I = u_I;
+    // Derivative gain
+    u_D = PID->Kd * (error - PID->prev_error) / PID->Tp;
 
-	//Derivative gain
+    u = u_P + u_I + u_D;
 
-	u_D = (error - PID->prev_error) / PID->Tp;
+    if (u > MAX_OUTPUT) {
+        u = MAX_OUTPUT;
+        u_I = PID->prev_u_I;
+    } else if (u < MIN_OUTPUT) {
+        u = MIN_OUTPUT;
+        u_I = PID->prev_u_I;
+    } else {
+        PID->prev_u_I = u_I;
+    }
 
+    PID->prev_error = error;
 
-	PID->prev_error = error;
-
-	u = u_P + u_I + u_D;
-
-	return u;
+    return u;
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
@@ -131,7 +143,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
             if (tempValue > 0 && tempValue <= 100) {
                 set_temp_f = (float)tempValue;
-
+                PID1.prev_u_I = 0.0f;
                 char response[50];
                 sprintf(response, "New temperature set: %.2fC\r\n", set_temp_f);
                 HAL_UART_Transmit(&huart3, (uint8_t *)response, strlen(response), 100);
@@ -177,9 +189,9 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	PID1.Kp = 0.038102305639845;
-	PID1.Ki = 0.000269333866370601;
-	PID1.Kd = 0.01898381935333;
+	PID1.Kp = 0.045102305639845;
+	PID1.Ki = 0.000655333866370601;
+	PID1.Kd = 0.075898381935333;
 	PID1.Tp = 1;
 	PID1.prev_error = 0;
 	PID1.prev_u_I = 0;

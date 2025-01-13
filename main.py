@@ -7,7 +7,7 @@ from matplotlib import style
 import serial
 import re
 
-class guiApp:           
+class guiApp:
     def __init__(self):
         self.serial_port = serial.Serial("COM3", 115200, timeout=0.1)
         self.TempData = 0
@@ -31,7 +31,7 @@ class guiApp:
                 data
             )
             if match:
-                self.currentTime = float(match.group(1)) / 1000
+                self.currentTime = float(match.group(1)) / 1000  
                 self.setTemp = float(match.group(2))
                 self.TempData = float(match.group(3))
                 self.PWMData = int(match.group(4))
@@ -55,20 +55,20 @@ class guiApp:
     def addTempEntry(self, root):
         txt = Entry(root, width=20)
         txt.grid(column=1, row=0, padx=10, pady=10)
-       
+
         submit_button = Button(root, text="Submit temperature", 
                                command=lambda: self.tempEntryCallback(txt.get()))
         submit_button.grid(column=2, row=0, padx=10, pady=10)
-     
+
     def tempEntryCallback(self, tempEntry):
         if not self.validateDataEntry(tempEntry):
             messagebox.showerror("Invalid Input", "Set temperature must be 23 < temp < 50")
         else:
             command = f"SETTEMP{tempEntry}"
             self.serial_port.write(command.encode())
-            
+
             messagebox.showinfo("Temperature Set", f"New temperature set to {tempEntry}")
-        
+
     def validateDataEntry(self, data):
         if data.isdigit():
             temp = int(data)
@@ -78,10 +78,10 @@ class guiApp:
     def addInfoLabels(self, root):
         self.setTempLabel = Label(root, text="Set Temperature: -- °C", font=("Arial", 12))
         self.setTempLabel.grid(column=0, row=1, padx=10, pady=10, sticky="W")
-        
+
         self.currentTempLabel = Label(root, text="Current Temperature: -- °C", font=("Arial", 12))
         self.currentTempLabel.grid(column=0, row=2, padx=10, pady=10, sticky="W")
-        
+
         self.pwmLabel = Label(root, text="PWM Value: --", font=("Arial", 12))
         self.pwmLabel.grid(column=0, row=3, padx=10, pady=10, sticky="W")
 
@@ -96,27 +96,26 @@ class guiApp:
         ax.set_title("Live Temperature Plot")
         ax.set_xlabel("Time (s)")
         ax.set_ylabel("Temperature (°C)")
-        
-        xs = []
-        ys = []
-        
+
+        self.xs = []
+        self.ys = []
+
         def animate(i):
-            if len(xs) > 100:
-                xs.pop(0)
-                ys.pop(0)
-            xs.append(self.currentTime)
-            ys.append(self.TempData)
+
+            self.xs.append(self.currentTime)
+            self.ys.append(self.TempData)
+
             ax.clear()
-            ax.plot(xs, ys, label="Temperature")
+            ax.plot(self.xs, self.ys, label="Temperature")
             ax.set_title("Live Temperature Plot")
             ax.set_xlabel("Time (s)")
             ax.set_ylabel("Temperature (°C)")
             ax.legend(loc="upper right")
-        
+
         canvas = FigureCanvasTkAgg(fig, master=root)
         canvas_widget = canvas.get_tk_widget()
         canvas_widget.grid(column=0, row=4, columnspan=3, padx=10, pady=10)
-        
+
         ani = animation.FuncAnimation(fig, animate, interval=1000)  
         canvas.draw()
 

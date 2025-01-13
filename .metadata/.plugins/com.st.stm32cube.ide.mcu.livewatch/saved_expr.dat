@@ -2,5 +2,9 @@ current_temperature_f
 set_temp_f
 pwm_duty_u
 pwm_duty_f
-i
-received
+u_P
+u_I
+u_D
+PID1.prev_u_I
+PID1.Kd
+PID1.Ki

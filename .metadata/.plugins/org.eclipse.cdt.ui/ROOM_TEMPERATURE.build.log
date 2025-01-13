@@ -1,10 +1,10 @@
-14:26:31 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
+16:11:04 **** Incremental Build of configuration Debug for project ROOM_TEMPERATURE ****
 make -j12 all 
 arm-none-eabi-size  ROOM_TEMPERATURE.elf 
    text	   data	    bss	    dec	    hex	filename
-  46616	    792	   4088	  51496	   c928	ROOM_TEMPERATURE.elf
+  46736	    792	   4096	  51624	   c9a8	ROOM_TEMPERATURE.elf
 Finished building: default.size.stdout
  
 
-14:26:32 Build Finished. 0 errors, 0 warnings. (took 296ms)
+16:11:04 Build Finished. 0 errors, 0 warnings. (took 640ms)
 
